@@ -1,0 +1,631 @@
+* {
+    font-family:'Titillium Web', sans-serif;
+    font-size:14px;
+    outline: none;
+}
+body, div {
+    margin:0;
+    padding:0;
+}
+body {
+    background:#fff;
+    overflow:hidden;
+    height:100%;
+}
+input, button {
+    outline:none;
+    border:none;
+    margin:0;
+}
+button {
+    cursor: pointer;
+}
+textarea {
+    resize:none;
+    outline:none;
+    border:none;
+    background:transparent;
+}
+.overflow {
+    overflow:auto;
+}
+.information {
+    height: 200px;
+    overflow: auto;
+}
+#admin-panel, #login {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:0;
+}
+#login {
+    background:#E1E1E1;
+    z-index:1;
+}
+#login img {
+    margin:0px 25px;
+}
+#login input, #login button {
+    display:block;
+    width:100%;
+    text-align:center;
+    padding:5px 0;
+    -webkit-box-shadow: 0px 1px 3px rgba(50, 50, 50, 0.41);
+    -moz-box-shadow:    0px 1px 3px rgba(50, 50, 50, 0.41);
+    box-shadow:         0px 1px 3px rgba(50, 50, 50, 0.41);
+}
+#frm-login {
+    position:absolute;
+    width:210px;
+    height:210px;
+    top:50%;
+    left:50%;
+    margin:-125px 0 0 -125px;
+    padding:20px;
+    background:#fff;
+    -webkit-box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.4);
+    -moz-box-shadow:    0px 0px 8px rgba(50, 50, 50, 0.4);
+    box-shadow:         0px 0px 8px rgba(50, 50, 50, 0.4);
+}
+#frm-add-coupon textarea {
+    height: 200px;
+}
+#header {
+    background:#F1F1F1;
+    width:100%;
+    height:30px;
+    padding:15px 0;
+}
+#header i{
+    margin-left:20px;
+    font-size: 5.5em;
+}
+#header .lefty {
+    position:absolute;
+    left:100%;
+    top: 15px;
+    margin-left:-320px;
+    width:300px;
+}
+#header .lefty a {
+    display: inline-block;
+    line-height: 30px;
+    position: relative;
+    float: right;
+    color:#676767;
+    margin:0 5px;
+}
+#header .icon {
+    font-size:22px;
+    cursor:pointer;
+}
+#tabs {
+    overflow:auto;
+}
+#tabs ul.tabs {
+    padding:0;
+    margin:10px 0 5px 5px;
+    overflow:auto;
+}
+#tabs ul.tabs li {
+    position:relative;
+    float:left;
+    list-style:none;
+    border:#d4d4d4 1px solid;
+    border-left:none;
+}
+#tabs ul.tabs li:nth-child(1) {
+    border-left:#d4d4d4 1px solid;
+}
+#tabs ul.tabs li a {
+    display:block;
+    width:250px;
+    line-height:37px;
+    border-top:#F3F3F3 2px solid;
+    background:#F3F3F3;
+    text-indent:10px;
+    color:#222;
+    text-decoration:none;
+}
+#tabs ul.tabs li a.tiny {
+    width: 53px;
+}
+#tabs ul.tabs li a i {
+    color:#717171;
+    font-size:1.1em;
+}
+#tabs ul.tabs li a:hover, #tabs ul.tabs li.select a {
+    border-top:#717171 2px solid;
+}
+#tabs ul.tabs li.select a {
+    background:#fff;
+}
+#tabs ul.tabs li.select {
+    border-bottom:#fff 1px solid;
+}
+#tabs ul.tabs li a:hover i, #tabs ul.tabs li.select a i {
+    color:#222;
+}
+#tabs-area {
+    position:relative;
+    border-top:#d9d9d9 1px solid;
+    margin:0 5px;
+}
+#tabs-area .tab {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    display:none;
+}
+.list, .body {
+    position:relative;
+    float:left;
+    height:100%;
+    overflow:auto;
+}
+.list {
+    width:350px;
+    border-right:#d4d4d4 1px solid;
+    margin-right:5px;
+}
+.body {
+    border-left:#d4d4d4 1px solid;
+}
+.body.full {
+    width: 100%!important;
+    border: none;
+}
+.row {
+    position: relative;
+    background:#EDEDED;
+    overflow:hidden;
+    width:95%;
+    padding:5px 2.5%;
+    border-bottom:#d4d4d4 1px solid;
+    height: 40px;
+}
+.row img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+}
+.row p {
+    position: relative;
+    margin: 1px 2px;
+    color: #fff;
+    z-index: 1;
+    font-weight: 600;
+    text-shadow: 0 0 2px #222;
+}
+.row p:nth-of-type(1) {
+    cursor: pointer;
+}
+.row p:nth-of-type(1):hover {
+    text-decoration: underline;
+}
+.row p small {
+    display: block;
+    font-weight: 300;
+    font-size: 0.9em;
+}
+.row a.icon-trash {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: red;
+    color: white;
+    padding: 7px;
+    border-radius: 20px;
+    z-index: 2;
+}
+.row a.icon-briefcase {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    background: green;
+    color: white;
+    padding: 7px;
+    border-radius: 20px;
+    z-index: 2;
+}
+a.close {
+    position: absolute;
+    top: 2px;
+    right: 20px;
+    color: #222222;
+    text-decoration: none;
+}
+.msm .row {
+    background:#fff;
+    padding:7px 0;
+    margin:0 2.5%;
+    cursor:default;
+}
+.row.new {
+    background:#fff;
+}
+.row.select {
+    background:#F9F9E0;
+}
+.row.new, .row.unread, .msm .row {
+    font-weight:600;
+}
+.row .maddress span {
+    float:right;
+}
+.row .mcontent, .row .mtitle {
+    width:99999px;
+}
+.row .mcontent {
+    font-weight:400;
+    color:#777;
+}
+.msm .row .mcontent {
+    width:100%;
+}
+.msm {
+    width:100%;
+    overflow:auto;
+    -webkit-box-shadow: 0px 1px 3px rgba(50, 50, 50, 0.41);
+    -moz-box-shadow:    0px 1px 3px rgba(50, 50, 50, 0.41);
+    box-shadow:         0px 1px 3px rgba(50, 50, 50, 0.41);
+}
+#chat.tab {
+    display:block;
+}
+.body .estira {
+    width: 100%;
+    padding: 10px 0;
+}
+.footbar {
+    overflow:auto;
+}
+#photos.tab {
+    overflow:hidden;
+}
+#location_bar {
+    width: 100%;
+    height: 39px;
+    margin: 2px 0;
+}
+#location_bar button {
+    position: relative;
+    float: left;
+    width: 35px;
+    height: 35px;
+    margin: 0 2px;
+    font-size: 22px;
+}
+#location {
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+#location ul {
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    width: 99999px;
+    list-style: none;
+}
+#location li {
+    position: relative;
+    float: left;
+    display: block;
+    margin: 0 2px;
+    line-height: 35px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#location li:hover {
+    text-decoration: underline;
+}
+#explorer {
+    position: relative;
+    float: left;
+    overflow: auto;
+    width: 100%;
+}
+#explorer .item {
+    position: relative;
+    float: left;
+    width: 120px;
+    height: 140px;
+    overflow: hidden;
+    border: #FFF 1px solid;
+    cursor: pointer;
+    margin: 2px;
+}
+#explorer .item .center {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    height: 94px;
+    width: 100%;
+}
+#explorer .item img {
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+#explorer .item p {
+    width: 116px;
+    margin: 0 2px;
+    text-align: center;
+}
+#explorer .item:hover, #explorer .item.select {
+    -webkit-box-shadow: 0px 1px 3px rgba(50, 50, 50, 0.41);
+    -moz-box-shadow:    0px 1px 3px rgba(50, 50, 50, 0.41);
+    box-shadow:         0px 1px 3px rgba(50, 50, 50, 0.41);
+}
+#explorer img.preview {
+    position: relative;
+    float: left;
+    display: block;
+    max-width: 600px;
+    max-height: 400px;
+}
+#explorer .file-info {
+    position: relative;
+    float: left;
+    margin-left: 20px;
+    width: 350px;
+}
+#explorer .file-info ul {
+    padding: 0;
+}
+#explorer .file-info li {
+    list-style: none;
+}
+#explorer .file-info li b {
+    display: inline-block;
+    width: 105px;
+}
+#explorer input {
+    width: 100%;
+}
+#explorer .item textarea {
+    width: 100%;
+    height: 44px;
+    text-align: center;
+    overflow: hidden;
+}
+.eliminable {
+    background: #E30B13;
+    color: #FFF;
+    padding: 5px 10px;
+}
+#loadfile {
+    position: fixed;
+    top: -999px;
+    left: -999px;
+    z-index: 0;
+}
+
+
+
+/*Aqui empieza el css no generico*/
+#containner {
+    overflow: hidden;
+}
+.sidebar {
+    position: relative;
+    float: left;
+    width: 250px;
+    height: 100%;
+    background: #eeeeee;
+    z-index: 1;
+}
+.side {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+.side#_tools {
+    height: 70%;
+    padding: 0 10px;
+    width: 230px;
+}
+.side#_properties {
+    height: 30%;
+}
+.side#_properties button {
+    width: 100%;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0px;
+}
+.side#_properties button i {
+    font-size: 1.5em;
+}
+
+.component {
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 300px;
+    background: #676767;
+    overflow: auto;
+    z-index: 0;
+}
+.component .screen {
+    width: 320px;
+    margin: 20px auto;
+    background: #fff;
+    min-height: 400px;
+    overflow: auto;
+}
+.screen h3.title {
+    color: #222;
+    font-size: 0.8em;
+    margin: 5px 10px;
+}
+.screen h3.title .remove {
+    background: #E30B13;
+    color: #fff;
+    float: right;
+    border-radius: 5px;
+}
+.screen ul {
+    margin: 0;
+    padding: 0;
+}
+.screen .element {
+    list-style: none;
+    margin: 5px 10px;
+    padding: 5px;
+}
+.screen li.hovered {
+    background: #cbcbcb;
+}
+.screen .element.add {
+    border: #717171 1px dashed;
+    color: #777;
+    font-size: 0.7em;
+    text-align: center;
+    cursor: default;
+}
+.screen .element button {
+    padding: 5px 3px;
+}
+.screen .element button i {
+    font-size: 0.7em;
+}
+.screen .element button.remove {
+    background: #E30B13;
+    color: #fff;
+}
+
+._row {
+    position: relative;
+    cursor: pointer;
+    width: 228px;
+    height: 18px;
+    border: #717171 1px dotted;
+    margin: 5px 0;
+}
+._row .dragg {
+    position: absolute;
+    border: transparent 1px dotted;
+    top: 0;
+    left: 0;
+    width: 228px;
+    height: 18px;
+}
+._row .dragg.ui-draggable-dragging {
+    border: #717171 1px dotted;
+    background: rgba(241,241,241,0.7);
+}
+.organizable {
+    position: relative;
+}
+
+
+#containner input[type=text], #containner select, #containner label, .ui-dialog-content input[type=text], .ui-dialog-content textarea, .ui-dialog-content select {
+    display: inline-block;
+    width: 150px;
+    margin-left: 3px;
+}
+#containner input[type=text], .ui-dialog-content input[type=text], .ui-dialog-content textarea {
+    box-shadow: #ccc 0 1px 2px;
+}
+.ui-dialog-content label {
+    display: inline-block;
+    width: 100px;
+}
+.ui-dialog-content textarea {
+    height: 70px;
+}
+#containner .screen b {
+    display: inline-block;
+    width: 90px;
+    height: 18px;
+    overflow: hidden;
+    font-weight: 300;
+}
+.hidden {
+    display: none;
+}
+#createProject {
+    width: 100%;
+    padding: 10px 5%;
+    background: #E30B13;
+    text-align: left;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+#createProject i {
+    font-size: 1em;
+}
+#createScreen {
+    display: block;
+    padding: 10px 20px;
+    background: #E30B13;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+#createScreen i {
+    font-size: 1em;
+}
+#chat .row p, #installation .row p {
+    color: #222;
+    text-shadow: none;
+}
+#chat .row p:first-of-type, #installation .row p:first-of-type {
+    font-weight: bold;
+}
+#loadInformation {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    display: none;
+}
+#loadInformation .information {
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    max-height: 90%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.85);
+    -moz-box-shadow:    0px 0px 7px 0px rgba(0, 0, 0, 0.85);
+    box-shadow:         0px 0px 7px 0px rgba(0, 0, 0, 0.85);
+}
+#loadInformation .information table {
+    border: #333 1px solid;
+    background: #fefefe;
+    margin: 10px 5%;
+    width: 90%;
+}
+
+#loadInformation .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px;
+    border: #000 1px solid;
+    background: #fff;
+    color: #000;
+}

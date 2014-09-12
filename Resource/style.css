@@ -1,0 +1,393 @@
+/* 
+    Document   : style
+    Created on : Nov 23, 2012, 4:58:59 PM
+    Author     : sedinson
+    Description:
+        Purpose of the stylesheet follows.
+*/
+*{
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+    outline: none;
+}
+body, html {
+    background: #fff;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    font-size: 2.0em;
+    font-weight: 600;
+}
+h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+a {
+    text-decoration: none;
+    font-weight: 600;
+}
+/*Menu Generico*/
+ul.menu {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+ul.menu li {
+    position: relative;
+    list-style: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+ul.menu li a {
+    padding: 5px 10px;
+}
+ul.menu li a:hover {
+    text-decoration: underline;
+}
+
+/*Wrapper*/
+#wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: auto;
+}
+.wrapper {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+}
+.context {
+    position: absolute;
+    width: 100%;
+}
+.section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.subtitle {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 50px;
+}
+
+.subtitle i {
+    color: #a1626b;
+    font-size: 0.9em;
+}
+
+.subtitle.right_align {
+    text-align: right;
+}
+
+
+/*
+ *      NAV
+ */
+a.logo {
+    position: relative;
+    float: left;
+    font-size: 5em;
+    color: #000;
+    margin: 0;
+}
+#nav {
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0 10px 0;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#nav .wrapper {
+    overflow: hidden;
+}
+#nav .menu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 20px;
+}
+#nav #button-menu {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    display: none;
+    font-size: 2.0em;
+    color: #000;
+}
+#nav .menu a {
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    color: #000;
+}
+#content {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/*
+ *      DESCRIPTION
+ */
+#slide ul, #slide-project ul {
+    margin: 0;
+}
+#slide li, #slide-project li {
+    width: 100%;
+}
+#slide img, #slide-project img {
+    position: relative;
+    width: 100%;
+}
+#slide .context {
+    top: 0;
+}
+#slide .context div {
+    height: 100%;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+#slide h2, #slide p {
+    width: 550px;
+    margin: 5px auto;
+    text-align: center;
+    color: #fff;
+}
+#slide h2, #slide h2 span {
+    font-weight: 700;
+}
+#slide h2, #slide h2 span {
+    font-size: 3.0em;
+}
+#slide p {
+    font-size: 1.1em;
+    font-weight: 300;
+}
+#slide h2 span {
+    font-size: 1.0em;
+    color: #a61518;
+}
+
+#slide-project {
+    min-height: 400px;
+    max-height: 450px;
+}
+
+
+/*
+ *      DESCRIPTION
+ */
+#desc {
+    background: #FF884D;
+    height: 250px;
+}
+#desc ul, #desc li {
+    width: 100%;
+    background: #FF884D;
+    height: 250px;
+    top: 0;
+}
+#desc li p {
+    color: #fff;
+    font-size: 1.5em;
+}
+#desc .context, #desc .context div {
+    height: 250px;
+}
+#desc .context div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/*
+ *      PROJECTS
+ */
+#projects h2 {
+    border-bottom: #e5e5e5 1px solid;
+    border-top: #e5e5e5 1px solid;
+    margin: 0;
+}
+#load-projects {
+    overflow: auto;
+}
+#projects h2.more {
+    font-size: 1.2em;
+    color: #cacaca;
+    cursor: pointer;
+}
+#projects h2.more:hover {
+    color: #afafaf;
+}
+#projects .project {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    cursor: pointer;
+    margin: 2px 0;
+}
+#projects .project .context {
+    top: 20px;
+}
+#projects .project img {
+    width: 100%;
+}
+#projects .project p {
+    width: 450px;
+    color: white;
+    text-shadow: 0 0 2px #000;
+}
+
+#welove {
+    padding: 90px 0 0 0;
+}
+h3#more {
+    margin-top: -30px;
+    text-align: right;
+    font-size: 0.94em;
+}
+h3#more i {
+    font-size: 1.8em;
+}
+
+
+/*
+ *      CONTACT
+ */
+#contact {
+    border-bottom: #e5e5e5 2px solid;
+    padding: 20px 0 20px 0;
+}
+#elcontact {
+    position: relative;
+    width: 45%;
+}
+#elcontact h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+}
+#elcontact a {
+    color: #d47078;
+    font-weight: 600;
+}
+#elcontact a:hover {
+    text-decoration: underline;
+}
+#elcontact i {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    font-size: 1.8em;
+    color: #222;
+}
+
+#footer {
+    height: 50px;
+}
+#footer .menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 335px;
+    margin: auto;
+}
+#footer .menu li a {
+    line-height: 50px;
+    font-size: 1.1em;
+}
+#footer .menu li a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1000px) {
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+    #nav {
+        background-color: #fff;
+    }
+    #slide .context {
+        top: 100px;
+    }
+    #slide img {
+        width: auto;
+    }
+    #elcontact {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #nav .menu {
+        position: relative;
+        padding-top: 40px;
+        width: 100%;
+        height: 80px;
+        display: none;
+    }
+    #nav #button-menu {
+        display: block;
+    }
+    #nav .menu li {
+        position: relative;
+        float: left;
+        width: 100%;
+    }
+    #nav .menu li a {
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #slide h2, #slide p {
+        width: auto;
+        margin: 5px 20px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #projects .project p {
+        width: auto;
+    }
+    #elcontact {
+        width: auto;
+    }
+    #footer {
+        height: 130px;
+    }
+    #footer .menu {
+        width: 100%;
+        overflow: hidden;
+    }
+    #footer .menu li {
+        position: relative;
+        float: left;
+        width: 100%;
+    }
+    #footer .menu li a {
+        display: block;
+        text-align: center;
+        line-height: 20px;
+        width: 100%;
+    }
+}
